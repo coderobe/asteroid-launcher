@@ -84,7 +84,7 @@ Item {
         acceptsDown: true
         acceptsRight: !comp.topmostWindowRequestsGesturesDisabled
 
-        property real swipeThreshold: 0.15
+        property real swipeThreshold: 0.88
 
         onGestureStarted: {
             swipeAnimation.stop()
@@ -99,13 +99,13 @@ Item {
                 if (gestureArea.progress >= swipeThreshold) {
                     swipeAnimation.valueTo = inverted ? -max : max
                     swipeAnimation.start()
+                    appsListView.currentPos = 0
                     Lipstick.compositor.closeClientForWindowId(comp.topmostWindow.window.windowId)
                 } else {
                     cancelAnimation.start()
                 }
             } else if (comp.homeActive) {
                 cancelAnimation.start()
-                appsListView.currentPos = 0
             }
         }
 
