@@ -3,6 +3,8 @@
         <file>images/shutdown-logo.png</file>
         <file>images/diskBackground.svg</file>
         <file>images/diskBackgroundPressed.svg</file>
+        <file>images/squareBackground.svg</file>
+        <file>images/squareBackgroundPressed.svg</file>
     </qresource>
     <qresource prefix="/qml/">
         <file alias="MainScreen.qml">qml/MainScreen.qml</file>

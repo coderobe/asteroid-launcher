@@ -37,7 +37,6 @@ import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 import "desktop.js" as Desktop
 import "compositor"
-import "applauncher"
 
 Item {
     id: root
