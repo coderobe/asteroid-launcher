@@ -37,14 +37,13 @@ import org.asteroid.controls 1.0
 
 MouseArea {
     id: launcherItem
-    property alias iconName: iconText.text
     property alias iconCaption: iconText.text
 
     onClicked: model.object.launchApplication()
 
     Image {
         anchors.fill: parent
-        source: launcherItem.pressed | fakePressed ? "qrc:/images/diskBackgroundPressed.svg" : "qrc:/images/squareBackground.svg"
+        source: launcherItem.pressed | fakePressed ? "qrc:/images/squareBackgroundPressed.svg" : "qrc:/images/squareBackground.svg"
         sourceSize.width: width
         sourceSize.height: height
     }

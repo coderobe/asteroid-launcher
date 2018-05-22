@@ -63,7 +63,6 @@ ListView {
         id: launcherItem
         width: appsListView.width
         height: Dims.h(20)
-        iconName: model.object.iconId == "" ? "ios-help" : model.object.iconId
         iconCaption: model.object.title.toUpperCase() + localeManager.changesObserver
         enabled: !appsListView.dragging
     }
