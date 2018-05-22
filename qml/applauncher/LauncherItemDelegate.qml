@@ -54,7 +54,7 @@ MouseArea {
         width: Dims.w(50)
         horizontalAlignment: Text.AlignHCenter
         anchors.horizontalCenter: parent.horizontalCenter
-        color: "#666666"
+        color: "#ffffff"
         font.pixelSize: Dims.l(5)
         font.weight: Font.Medium
     }
