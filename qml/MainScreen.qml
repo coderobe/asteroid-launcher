@@ -176,7 +176,7 @@ Item {
 
     Timer {
         id: lockscreenDelay
-        interval: 150
+        interval: 300
         repeat: false
         onTriggered: Desktop.onAboutToClose()
     }
