@@ -44,26 +44,27 @@ MouseArea {
 
     Image {
         anchors.fill: parent
-        source: launcherItem.pressed | fakePressed ? "qrc:/images/diskBackgroundPressed.svg" : "qrc:/images/diskBackground.svg"
+        source: launcherItem.pressed | fakePressed ? "qrc:/images/diskBackgroundPressed.svg" : "qrc:/images/squareBackground.svg"
         sourceSize.width: width
         sourceSize.height: height
     }
 
-    Icon {
-        id: icon
-        anchors.centerIn: parent
-        anchors.verticalCenterOffset: -Dims.h(3)
-        width: Dims.w(31)
-        height: width
-        color: "#666666"
-    }
+#    Icon {
+#        id: icon
+#        anchors.centerIn: parent
+#        anchors.verticalCenterOffset: -Dims.h(3)
+#        width: Dims.w(31)
+#        height: width
+#        color: "#666666"
+#    }
 
     Label {
         id: iconText
-        anchors.top: icon.bottom
+#        anchors.top: icon.bottom
+        anchors.centerIn: parent
         width: Dims.w(50)
         horizontalAlignment: Text.AlignHCenter
-        anchors.topMargin: Dims.h(4)
+#        anchors.topMargin: Dims.h(4)
         anchors.horizontalCenter: parent.horizontalCenter
         color: "#666666"
         font.pixelSize: Dims.l(5)
