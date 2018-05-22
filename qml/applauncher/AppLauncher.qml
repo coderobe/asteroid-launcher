@@ -32,23 +32,24 @@
 
 import QtQuick 2.9
 import org.asteroid.controls 1.0
+import org.asteroid.utils 1.0
 import org.nemomobile.lipstick 0.1
 
 ListView {
     id: appsListView
-    orientation: ListView.Horizontal
+    orientation: ListView.Vertical
     snapMode: ListView.SnapToItem
 
     property bool fakePressed:     false
     property bool toTopAllowed:    false
-    property bool toBottomAllowed: false
-    property bool toLeftAllowed:   true
+    property bool toBottomAllowed: true
+    property bool toLeftAllowed:   false
     property bool toRightAllowed:  false
     property int currentPos: 0
 
     onCurrentPosChanged: {
-        toLeftAllowed = (currentPos!=launcherModel.itemCount-1)
-        toRightAllowed  = (currentPos!=0)
+        toBottomAllowed = (currentPos!=launcherModel.itemCount-1)
+        toTopAllowed  = (currentPos!=0)
 
         rightIndicator.animate()
         leftIndicator.animate()
@@ -61,7 +62,7 @@ ListView {
     delegate: LauncherItemDelegate {
         id: launcherItem
         width: appsListView.width
-        height: appsListView.width
+        height: Dims.h(20)
         iconName: model.object.iconId == "" ? "ios-help" : model.object.iconId
         iconCaption: model.object.title.toUpperCase() + localeManager.changesObserver
         enabled: !appsListView.dragging
