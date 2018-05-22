@@ -37,6 +37,7 @@ import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 import "desktop.js" as Desktop
 import "compositor"
+import "applauncher"
 
 Item {
     id: root
@@ -105,6 +106,7 @@ Item {
                 }
             } else if (comp.homeActive) {
                 cancelAnimation.start()
+                appsListView.currentPos = 0
             }
         }
 
