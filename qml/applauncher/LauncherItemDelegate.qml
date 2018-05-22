@@ -37,7 +37,7 @@ import org.asteroid.controls 1.0
 
 MouseArea {
     id: launcherItem
-    property alias iconName: icon.name
+    property alias iconName: "foobar"
     property alias iconCaption: iconText.text
 
     onClicked: model.object.launchApplication()
