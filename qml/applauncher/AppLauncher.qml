@@ -48,11 +48,8 @@ ListView {
     property int currentPos: 0
 
     onCurrentPosChanged: {
-        toBottomAllowed = (currentPos!=launcherModel.itemCount-1)
         toTopAllowed  = (currentPos!=0)
 
-        rightIndicator.animate()
-        leftIndicator.animate()
         topIndicator.animate()
         bottomIndicator.animate()
     }
