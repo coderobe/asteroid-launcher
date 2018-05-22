@@ -41,7 +41,7 @@ ListView {
     snapMode: ListView.SnapToItem
 
     property bool fakePressed:     false
-    property bool toTopAllowed:    false
+    property bool toTopAllowed:    true
     property bool toBottomAllowed: true
     property bool toLeftAllowed:   false
     property bool toRightAllowed:  false
