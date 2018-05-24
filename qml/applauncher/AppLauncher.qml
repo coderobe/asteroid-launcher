@@ -50,7 +50,7 @@ ListView {
     property bool toRightAllowed:  false
     property int currentPos: 0
 
-    gestureFilter: GestureFilterArea { id: gestureFilterArea }
+    GestureFilterArea { id: gestureFilterArea }
 
     onCurrentPosChanged: {
         toTopAllowed  = (currentPos!=0)
