@@ -50,11 +50,9 @@ ListView {
     property bool toRightAllowed:  false
     property int currentPos: 0
 
-    GestureFilterArea { id: gestureFilterArea }
-
     onCurrentPosChanged: {
         toTopAllowed  = (currentPos!=0)
-        gestureFilterArea.setToTopAllowed(toTopAllowed)
+        panelsGrid.setToTopAllowed(toTopAllowed)
 
         topIndicator.animate()
         bottomIndicator.animate()
