@@ -36,6 +36,8 @@ import org.asteroid.utils 1.0
 import org.nemomobile.lipstick 0.1
 import org.asteroid.launcher 1.0
 
+
+
 ListView {
     id: appsListView
     orientation: ListView.Vertical
@@ -48,9 +50,11 @@ ListView {
     property bool toRightAllowed:  false
     property int currentPos: 0
 
+    gestureFilter: GestureFilterArea { id: gestureFilterArea }
+
     onCurrentPosChanged: {
         toTopAllowed  = (currentPos!=0)
-        GestureFilterArea.setToTopAllowed(toTopAllowed)
+        gestureFilterArea.setToTopAllowed(toTopAllowed)
 
         topIndicator.animate()
         bottomIndicator.animate()
