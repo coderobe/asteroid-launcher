@@ -34,6 +34,7 @@ import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 import org.nemomobile.lipstick 0.1
+import org.asteroid.launcher 1.0
 
 ListView {
     id: appsListView
@@ -49,6 +50,7 @@ ListView {
 
     onCurrentPosChanged: {
         toTopAllowed  = (currentPos!=0)
+        GestureFilterArea.setToTopAllowed(toTopAllowed)
 
         topIndicator.animate()
         bottomIndicator.animate()
